@@ -9,6 +9,9 @@ namespace NoteAPI.Domain {
         [MaxLength(300)]
         public string NoteContent {get; set;}
 
+        public int UserId {get; set;}
+        public User User {get; set;}
+
     }
 
 }
