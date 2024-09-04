@@ -14,4 +14,6 @@ public interface IUserRepository<T> where T: class {
     Task<List<T>> GetAllUsersAsync();
 
     Task<T> GetUserByIdAsync(int id);
+
+    Task<T> GetUserByUsernameAsync(string username);
 }
