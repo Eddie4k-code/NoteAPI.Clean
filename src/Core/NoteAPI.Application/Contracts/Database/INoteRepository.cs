@@ -1,4 +1,6 @@
 /* Any concrete implementation of a UserRepository will implemenet this */
+namespace NoteAPI.Application.Contracts;
+
 
 using NoteAPI.Domain;
 

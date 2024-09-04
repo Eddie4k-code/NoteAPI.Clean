@@ -1,9 +1,11 @@
 /* Any concrete implementation of a UserRepository will implemenet this */
 
+namespace NoteAPI.Application.Contracts;
+
 using NoteAPI.Domain;
 
 public interface IUserRepository<T> where T: class {
-    Task CreateUserAsync(T Entity);
+    Task<int> CreateUserAsync(T Entity);
 
     Task UpdateUserAsync(T Entity);
 
