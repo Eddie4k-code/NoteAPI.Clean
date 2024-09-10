@@ -3,7 +3,7 @@ using NoteAPI.Application.Contracts;
 using NoteAPI.Application.Errors;
 using NoteAPI.Domain;
 
-public class CreateUserHandler : IRequestHandler<CreateUserCommand, int>
+public class CreateUserHandler : IRequestHandler<CreateUserCommand<User>, int>
 {
 
     private readonly IUserRepository<User> _userRepository;
@@ -14,7 +14,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, int>
 
     }
 
-    public async Task<int> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<int> Handle(CreateUserCommand<User> request, CancellationToken cancellationToken)
     {   
 
         var existingUser = await this._userRepository.GetUserByUsernameAsync(request.User.Username);

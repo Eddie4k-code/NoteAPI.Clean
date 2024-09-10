@@ -1,7 +1,7 @@
 using MediatR;
 using NoteAPI.Domain;
 
-public class CreateUserCommand : IRequest<int> {
-    public User User {get; set;}
+public class CreateUserCommand<T> : IRequest<int> {
+    public T User {get; set;}
 }
 
